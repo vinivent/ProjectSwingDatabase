@@ -16,9 +16,9 @@ Group: David Philien, Geraldo Neto, Giovana Lopes, Gustavo Luiz and Vinícius Ve
  <p align ="center">________________________________________________</p><br/>
 
 <p align="center"> Português: <p/>
-<h3 align="center">Projeto Unicap</h3> <br/> 
+<h3 align="center">Projeto UNINASSAU</h3> <br/> 
 
-<p align="center">- Este é um projeto da disciplina de P3 da UNICAP</p>
+<p align="center">- Este é um projeto da disciplina de Programação Avançada da UNINASSAU</p>
 <h2 align= "center"> Funcionalidades Básicas: </h2> <br/>
 
 - Usar padrões de design como SOLID e MVC.
