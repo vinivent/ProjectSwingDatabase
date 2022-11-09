@@ -1,5 +1,5 @@
-package Controller.DAO;
+package Model.DAO;
 
 public class AccountDAO {
-    
+
 }
