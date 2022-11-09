@@ -19,8 +19,12 @@ public class LogInControler implements ILogInController<Account> {
     }
    
     @Override
-    public boolean logIn(String username, String password) {
-        // TODO Auto-generated method stub
+    public boolean logIn(Account account) {
+        try {
+          // accountDAO. 
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
         return false;
     }
 

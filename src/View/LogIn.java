@@ -11,7 +11,7 @@ import Model.Entity.Account;
 import View.*;
 import Controller.*;
 
-public class LogIn extends JFrame implements ActionListener {
+public class LogIn extends JFrame implements ActionListener  {
 
     private JPanel contentPane;
     private JTextField loginTextField;
@@ -23,7 +23,7 @@ public class LogIn extends JFrame implements ActionListener {
         setIconImage(Toolkit.getDefaultToolkit().getImage("./lib/fogo.png"));
         setForeground(new Color(0, 0, 0));
         setTitle("Sistema G3VD");
-        setResizable(true);
+        setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 450, 300);
         contentPane = new JPanel();
@@ -64,16 +64,8 @@ public class LogIn extends JFrame implements ActionListener {
         passwordField.setBounds(164, 173, 134, 20);
         contentPane.add(passwordField);
 
-        btnLogIn.addActionListener(this);
+       btnLogIn.addActionListener(this);
 
-    }
-
-    public JPanel getContentPane() {
-        return contentPane;
-    }
-
-    public void setContentPane(JPanel contentPane) {
-        this.contentPane = contentPane;
     }
 
     public JTextField getLoginTextField() {
@@ -101,10 +93,12 @@ public class LogIn extends JFrame implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent event) {
 
-        if (e.getSource() == btnLogIn)
-            logIn();
+        if (event.getSource() == btnLogIn) { 
+            System.out.println("ye");
+              logIn();
+        } 
 
     }
 
@@ -113,12 +107,8 @@ public class LogIn extends JFrame implements ActionListener {
         String password = String.valueOf(getPasswordField().getPassword());
 
         Account account = new Account(username, password);
+        
+        boolean flag = controller.logIn(account);
 
-        if (controller.logIn(username, password)) {
-            JOptionPane.showMessageDialog(this, "Conta alterada com sucesso");
-        } else {
-            JOptionPane.showMessageDialog(this, "Conta não localizada");
-
-        }
-    }
+    }    
 }
