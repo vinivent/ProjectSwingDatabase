@@ -1,23 +1,16 @@
 package View;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
-import java.awt.Font;
-import javax.swing.SwingConstants;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import javax.swing.JPasswordField;
-import java.awt.Color;
-import java.awt.Toolkit;
-
-public class LogIn extends JFrame {
+public class LogIn extends JFrame implements ActionListener {
 
     private JPanel contentPane;
     private JTextField loginTextField;
     private JPasswordField passwordField;
+    private JButton btnLogIn;
 
     public LogIn() {
         setIconImage(Toolkit.getDefaultToolkit().getImage("./lib/fogo.png"));
@@ -63,5 +56,20 @@ public class LogIn extends JFrame {
         passwordField = new JPasswordField();
         passwordField.setBounds(164, 173, 134, 20);
         contentPane.add(passwordField);
+
+        btnLogIn.addActionListener(this);
+
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        if (e.getSource() == btnLogIn)
+            logIn();
+
+    }
+
+    private void logIn() {
+        
     }
 }
