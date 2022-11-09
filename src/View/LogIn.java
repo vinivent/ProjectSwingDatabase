@@ -5,18 +5,25 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+import Model.*;
+import Model.DAO.AccountDAO;
+import Model.Entity.Account;
+import View.*;
+import Controller.*;
+
 public class LogIn extends JFrame implements ActionListener {
 
     private JPanel contentPane;
     private JTextField loginTextField;
     private JPasswordField passwordField;
     private JButton btnLogIn;
+    private ILogInController<Account> controller;
 
     public LogIn() {
         setIconImage(Toolkit.getDefaultToolkit().getImage("./lib/fogo.png"));
         setForeground(new Color(0, 0, 0));
         setTitle("Sistema G3VD");
-        setResizable(false);
+        setResizable(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 450, 300);
         contentPane = new JPanel();
@@ -61,6 +68,38 @@ public class LogIn extends JFrame implements ActionListener {
 
     }
 
+    public JPanel getContentPane() {
+        return contentPane;
+    }
+
+    public void setContentPane(JPanel contentPane) {
+        this.contentPane = contentPane;
+    }
+
+    public JTextField getLoginTextField() {
+        return loginTextField;
+    }
+
+    public void setLoginTextField(JTextField loginTextField) {
+        this.loginTextField = loginTextField;
+    }
+
+    public JPasswordField getPasswordField() {
+        return passwordField;
+    }
+
+    public void setPasswordField(JPasswordField passwordField) {
+        this.passwordField = passwordField;
+    }
+
+    public JButton getBtnLogIn() {
+        return btnLogIn;
+    }
+
+    public void setBtnLogIn(JButton btnLogIn) {
+        this.btnLogIn = btnLogIn;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -70,6 +109,16 @@ public class LogIn extends JFrame implements ActionListener {
     }
 
     private void logIn() {
-        
+        String username = this.getLoginTextField().getText();
+        String password = String.valueOf(getPasswordField().getPassword());
+
+        Account account = new Account(username, password);
+
+        if (controller.logIn(username, password)) {
+            JOptionPane.showMessageDialog(this, "Conta alterada com sucesso");
+        } else {
+            JOptionPane.showMessageDialog(this, "Conta não localizada");
+
+        }
     }
 }

@@ -1,5 +1,7 @@
 package Model.DAO;
 
-public class AccountDAO {
+import Model.Entity.Account;
+
+public class AccountDAO extends GenericDAO<Account> {
 
 }
