@@ -10,5 +10,5 @@
 - MVC.
 
 <br/>
-<p align= "center"> Students: David Philien, Geraldo Neto, Giovana Lopes, Gustavo Luiz and Vinícius Ventura. : </p>
+<p align= "center"> Students: David Philien, Geraldo Neto, Giovana Lopes, Gustavo Luiz and Vinícius Ventura.</p>
 
