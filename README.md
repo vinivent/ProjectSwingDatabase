@@ -1,4 +1,3 @@
-In This Repo You Will Find An GUI Store Management 
 <h1 align="center">TITLE</h1> <br/> 
 
 <p align="center">- SUBTITLE</p> <br/>
