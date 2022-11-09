@@ -1,0 +1,9 @@
+{
+  "java.project.sourcePaths": ["src"],
+  "java.project.outputPath": "bin",
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "c:\\Users\\xddcs\\Downloads\\flatlaf-2.6.jar",
+    "c:\\Users\\xddcs\\Downloads\\flatlaf-intellij-themes-2.6.jar"
+  ]
+}
