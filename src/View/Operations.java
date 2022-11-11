@@ -33,7 +33,7 @@ public class Operations extends JFrame implements ActionListener {
 		btnChange.setBounds(147, 204, 136, 23);
 		getContentPane().add(btnChange);
 
-		btnShow = new JButton("Exibir Produtos");
+		btnShow = new JButton("Gerenciar Produtos");
 		btnShow.setBounds(246, 171, 136, 23);
 		getContentPane().add(btnShow);
 
@@ -43,7 +43,7 @@ public class Operations extends JFrame implements ActionListener {
 		getContentPane().add(internalLable);
 
 		btnRegister.addActionListener(this);
-		btnShow.addActionListener(this); 
+		btnShow.addActionListener(this);
 		btnChange.addActionListener(this);
 	}
 
