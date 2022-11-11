@@ -1,13 +1,8 @@
 package View;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import java.awt.Font;
-import java.awt.Toolkit;
-import javax.swing.SwingConstants;
+import java.awt.*;
 import java.awt.event.*;
-
-import javax.swing.JButton;
+import javax.swing.*;
 
 public class Operations extends JFrame implements ActionListener {
 	private JButton btnRegister, btnShow, btnChange;
@@ -48,6 +43,8 @@ public class Operations extends JFrame implements ActionListener {
 		getContentPane().add(internalLable);
 
 		btnRegister.addActionListener(this);
+		btnShow.addActionListener(this); 
+		btnChange.addActionListener(this);
 	}
 
 	@Override
@@ -56,6 +53,16 @@ public class Operations extends JFrame implements ActionListener {
 			dispose();
 			RegisterProduct registerFrame = new RegisterProduct();
 			registerFrame.setVisible(true);
+		}
+		if (event.getSource().equals(btnShow)) {
+			dispose();
+			ManageProduct manageFrame = new ManageProduct();
+			manageFrame.setVisible(true);
+		}
+		if (event.getSource().equals(btnChange)) {
+			dispose();
+			ChangeProduct changeFrame = new ChangeProduct();
+			changeFrame.setVisible(true);
 		}
 
 	}

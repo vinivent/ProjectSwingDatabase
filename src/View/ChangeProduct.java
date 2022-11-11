@@ -1,13 +1,12 @@
 package View;
 
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import com.toedter.calendar.JDateChooser;
 
-public class RegisterProduct extends JFrame implements ActionListener {
+public class ChangeProduct extends JFrame implements ActionListener{
 
     private JPanel contentPane;
     private JTextField codeTextField;
@@ -19,8 +18,9 @@ public class RegisterProduct extends JFrame implements ActionListener {
     private JDateChooser dateChooser;
     private JButton buttonLeave, buttonClear, buttonSave;
 
-    public RegisterProduct() {
-        setIconImage(Toolkit.getDefaultToolkit().getImage("./lib/fogo.png"));
+    public ChangeProduct() {
+        setIconImage(Toolkit.getDefaultToolkit()
+                .getImage("./lib/fogo.png"));
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 636, 400);
@@ -63,11 +63,11 @@ public class RegisterProduct extends JFrame implements ActionListener {
 
         JLabel lableDate = new JLabel("Data de Registro:");
         lableDate.setFont(new Font("Montserrat", Font.PLAIN, 11));
-        lableDate.setBounds(443, 192, 124, 14);
+        lableDate.setBounds(442, 192, 124, 14);
         contentPane.add(lableDate);
 
         dateChooser = new JDateChooser();
-        dateChooser.setBounds(442, 208, 140, 20);
+        dateChooser.setBounds(442, 208, 136, 20);
         contentPane.add(dateChooser);
 
         JLabel lablePurchase = new JLabel("Valor de Compra:");
@@ -105,11 +105,6 @@ public class RegisterProduct extends JFrame implements ActionListener {
         lableAmount.setBounds(316, 192, 124, 14);
         contentPane.add(lableAmount);
 
-        amountTextField = new JTextField();
-        amountTextField.setColumns(10);
-        amountTextField.setBounds(316, 208, 105, 20);
-        contentPane.add(amountTextField);
-
         buttonSave = new JButton("Salvar");
         buttonSave.setBounds(135, 281, 89, 23);
         contentPane.add(buttonSave);
@@ -122,11 +117,21 @@ public class RegisterProduct extends JFrame implements ActionListener {
         buttonLeave.setBounds(389, 281, 89, 23);
         contentPane.add(buttonLeave);
 
-        buttonSave.addActionListener(this);
-        buttonClear.addActionListener(this);
-        buttonLeave.addActionListener(this);
-    }
+        amountTextField = new JTextField();
+        amountTextField.setColumns(10);
+        amountTextField.setBounds(316, 208, 105, 20);
+        contentPane.add(amountTextField);
 
+        JLabel lableWarning = new JLabel("ATENÇÃO: DIGITE NOS CAMPOS QUE DESEJA ALTERAR");
+        lableWarning.setForeground(Color.RED);
+        lableWarning.setFont(new Font("Montserrat", Font.BOLD, 11));
+        lableWarning.setBounds(141, 113, 326, 14);
+        contentPane.add(lableWarning);
+
+		buttonSave.addActionListener(this); 
+        buttonClear.addActionListener(this);
+		buttonLeave.addActionListener(this);
+    }
     @Override
 	public void actionPerformed(ActionEvent event) {
 		if (event.getSource().equals(buttonSave)) {
