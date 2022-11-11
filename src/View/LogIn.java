@@ -5,19 +5,12 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-import Model.*;
-import Model.DAO.AccountDAO;
-import Model.Entity.Account;
-import View.*;
-import Controller.*;
-
 public class LogIn extends JFrame implements ActionListener  {
 
     private JPanel contentPane;
     private JTextField loginTextField;
     private JPasswordField passwordField;
     private JButton btnLogIn;
-    private ILogInController<Account> controller;
 
     public LogIn() {
         setIconImage(Toolkit.getDefaultToolkit().getImage("./lib/fogo.png"));
@@ -56,7 +49,7 @@ public class LogIn extends JFrame implements ActionListener  {
         contentPane.add(loginTextField);
         loginTextField.setColumns(10);
 
-        JButton btnLogIn = new JButton("Entrar");
+        btnLogIn = new JButton("Entrar");
         btnLogIn.setBounds(195, 207, 69, 20);
         contentPane.add(btnLogIn);
 
@@ -68,47 +61,20 @@ public class LogIn extends JFrame implements ActionListener  {
 
     }
 
-    public JTextField getLoginTextField() {
-        return loginTextField;
-    }
-
-    public void setLoginTextField(JTextField loginTextField) {
-        this.loginTextField = loginTextField;
-    }
-
-    public JPasswordField getPasswordField() {
-        return passwordField;
-    }
-
-    public void setPasswordField(JPasswordField passwordField) {
-        this.passwordField = passwordField;
-    }
-
-    public JButton getBtnLogIn() {
-        return btnLogIn;
-    }
-
-    public void setBtnLogIn(JButton btnLogIn) {
-        this.btnLogIn = btnLogIn;
-    }
-
     @Override
     public void actionPerformed(ActionEvent event) {
 
-        if (event.getSource() == btnLogIn) { 
-            System.out.println("ye");
-              logIn();
-        } 
+        if (loginTextField.getText().equals("") || passwordField.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Preencha todos os campos.");
+        } else if (loginTextField.getText().equals("admin") && passwordField.getText().equals("admin")) {
+            dispose();
+            Operations operationsFrame = new Operations();
+            operationsFrame.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(this, "Login ou senha inválidos");
+            loginTextField.setText("");
+            passwordField.setText("");
+        }
 
     }
-
-    private void logIn() {
-        String username = this.getLoginTextField().getText();
-        String password = String.valueOf(getPasswordField().getPassword());
-
-        Account account = new Account(username, password);
-        
-        boolean flag = controller.logIn(account);
-
-    }    
 }

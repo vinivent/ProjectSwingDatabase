@@ -1,5 +1,7 @@
 package View;
 
+
+import java.awt.event.*;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -11,7 +13,7 @@ import java.awt.Toolkit;
 import com.toedter.calendar.JDateChooser;
 import javax.swing.JButton;
 
-public class RegisterProduct extends JFrame {
+public class RegisterProduct extends JFrame implements ActionListener {
 
     private JPanel contentPane;
     private JTextField codeTextField;
@@ -123,5 +125,14 @@ public class RegisterProduct extends JFrame {
         JButton buttonLeave = new JButton("Sair");
         buttonLeave.setBounds(389, 281, 89, 23);
         contentPane.add(buttonLeave);
+
+        buttonSave.addActionListener(this);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent event) {
+
+        
+
     }
 }

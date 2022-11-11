@@ -19,7 +19,7 @@ public class ManageProduct extends JFrame {
 	private JTable table;
 
 	public ManageProduct() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\xddcs\\Documents\\UNINASSAU\\Projetinho\\lib\\fogo.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("./lib/fogo.png"));
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 740, 500);
