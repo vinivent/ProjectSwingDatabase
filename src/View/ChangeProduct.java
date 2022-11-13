@@ -9,13 +9,13 @@ import com.toedter.calendar.JDateChooser;
 public class ChangeProduct extends JFrame implements ActionListener{
 
     private JPanel contentPane;
-    private JTextField codeTextField;
-    private JTextField nameTextField;
-    private JTextField purchaseTextField;
-    private JTextField saleTextField;
-    private JTextField categoryTextField;
-    private JTextField amountTextField;
-    private JDateChooser dateChooser;
+    public static JTextField codeTextField;
+    public static JTextField nameTextField;
+    public static JTextField purchaseTextField;
+    public static JTextField saleTextField;
+    public static JTextField categoryTextField;
+    public static JTextField amountTextField;
+    public static JDateChooser dateChooser;
     private JButton buttonLeave, buttonClear, buttonSave;
 
     public ChangeProduct() {
@@ -138,12 +138,12 @@ public class ChangeProduct extends JFrame implements ActionListener{
 			System.out.println("deveria inserir as porra la");
 		}
 		if (event.getSource().equals(buttonClear)) {
-			nameTextField.setText("");
-            codeTextField.setText("");
-            purchaseTextField.setText("");
-            saleTextField.setText("");
-            categoryTextField.setText("");
-            amountTextField.setText("");
+			nameTextField.setText(null);
+            codeTextField.setText(null);
+            purchaseTextField.setText(null);
+            saleTextField.setText(null);
+            categoryTextField.setText(null);
+            amountTextField.setText(null);
             dateChooser.setDate(null);
 		}
 		if (event.getSource().equals(buttonLeave)) {

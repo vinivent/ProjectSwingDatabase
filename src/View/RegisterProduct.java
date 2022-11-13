@@ -1,14 +1,19 @@
 package View;
 
-
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Date;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import com.toedter.calendar.JDateChooser;
 
+import Controller.RegisterProductDAO;
+import Model.Entity.Product;
+
 public class RegisterProduct extends JFrame implements ActionListener {
 
+    java.sql.Date productDate;
     private JPanel contentPane;
     private JTextField codeTextField;
     private JTextField nameTextField;
@@ -128,24 +133,61 @@ public class RegisterProduct extends JFrame implements ActionListener {
     }
 
     @Override
-	public void actionPerformed(ActionEvent event) {
-		if (event.getSource().equals(buttonSave)) {
-			System.out.println("deveria inserir as porra la");
-		}
-		if (event.getSource().equals(buttonClear)) {
-			nameTextField.setText("");
-            codeTextField.setText("");
-            purchaseTextField.setText("");
-            saleTextField.setText("");
-            categoryTextField.setText("");
-            amountTextField.setText("");
-            dateChooser.setDate(null);
-		}
-		if (event.getSource().equals(buttonLeave)) {
-			dispose();
-			Operations opFrame = new Operations();
-			opFrame.setVisible(true);
-		}
+    public void actionPerformed(ActionEvent event) {
+        if (event.getSource().equals(buttonSave)) {
+            Product product = new Product();
 
-	}
+            String productName, productCategory, productCode, amount, productPurchase, productSale;
+            Date productRegisterDate;
+
+            productCode = codeTextField.getText();
+            amount = amountTextField.getText();
+            productName = nameTextField.getText();
+            productCategory = categoryTextField.getText();
+            productPurchase = purchaseTextField.getText();
+            productSale = saleTextField.getText();
+            productRegisterDate = dateChooser.getDate();
+            
+            if (productCode.equals("") || amount.equals("") || productName.equals("") || productCategory.equals("")
+                    || productPurchase.equals("") || productSale.equals("") || productRegisterDate == null) {
+                JOptionPane.showMessageDialog(null, "Preencha todos os campos obrigatórios.");
+            } else {
+                productDate = Product.convertUtilDateToSqlDate(productRegisterDate);
+                product.setProductCategory(productCategory);
+                product.setProductDate(productDate);
+                product.setProductId(productCode);
+                product.setProductName(productName);
+                product.setProductPurchase(productPurchase);
+                product.setProductSale(productSale);
+                product.setProductQtd(amount);
+
+                RegisterProductDAO objProduct = new RegisterProductDAO();
+                objProduct.registerProduct(product);
+
+                nameTextField.setText(null);
+                codeTextField.setText(null);
+                purchaseTextField.setText(null);
+                saleTextField.setText(null);
+                categoryTextField.setText(null);
+                amountTextField.setText(null);
+                dateChooser.setDate(null);
+            }
+
+        }
+        if (event.getSource().equals(buttonClear)) {
+            nameTextField.setText(null);
+            codeTextField.setText(null);
+            purchaseTextField.setText(null);
+            saleTextField.setText(null);
+            categoryTextField.setText(null);
+            amountTextField.setText(null);
+            dateChooser.setDate(null);
+        }
+        if (event.getSource().equals(buttonLeave)) {
+            dispose();
+            Operations opFrame = new Operations();
+            opFrame.setVisible(true);
+        }
+
+    }
 }
