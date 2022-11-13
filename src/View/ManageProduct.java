@@ -2,15 +2,20 @@ package View;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.SQLException;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
+
+import Controller.ShowTablesDAO;
 
 public class ManageProduct extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
 	private JTextField textField;
-	private JTable table;
-	private JButton buttonLeave, buttonDelete;
+	public static JTable table;
+	private JButton buttonLeave, buttonDelete, buttonView;
 
 	public ManageProduct() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("./lib/fogo.png"));
@@ -50,9 +55,25 @@ public class ManageProduct extends JFrame implements ActionListener {
 		buttonDelete.setBounds(400, 430, 89, 23);
 		contentPane.add(buttonDelete);
 
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(39, 113, 644, 301);
+		contentPane.add(scrollPane);
+
 		table = new JTable();
-		table.setBounds(104, 132, 489, 287);
-		contentPane.add(table);
+		table.setRowSelectionAllowed(false);
+		scrollPane.setViewportView(table);
+		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		table.setModel(new DefaultTableModel(
+
+				null, new String[] {
+						"ID", "Quantidade", "Nome", "Categoria", "Valor de Compra", "Valor de Venda", "Data de Registro"
+				}));
+		table.getColumnModel().getColumn(0).setPreferredWidth(72);
+		table.getColumnModel().getColumn(2).setPreferredWidth(84);
+		table.getColumnModel().getColumn(3).setPreferredWidth(91);
+		table.getColumnModel().getColumn(4).setPreferredWidth(96);
+		table.getColumnModel().getColumn(5).setPreferredWidth(88);
+		table.getColumnModel().getColumn(6).setPreferredWidth(113);
 
 		JLabel storageLabel = new JLabel("Estoque:");
 		storageLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -66,20 +87,36 @@ public class ManageProduct extends JFrame implements ActionListener {
 		buttonLeave.setBounds(499, 430, 89, 23);
 		contentPane.add(buttonLeave);
 
+		buttonView = new JButton("Ver Estoque");
+		buttonView.setForeground(Color.RED);
+		buttonView.setFont(new Font("Tahoma", Font.BOLD, 11));
+		buttonView.setBounds(535, 44, 99, 23);
+		contentPane.add(buttonView);
+
 		buttonDelete.addActionListener(this);
 		buttonLeave.addActionListener(this);
+		buttonView.addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if (event.getSource().equals(buttonDelete)) {
 			System.out.println("deveria deletar as porra la");
+			System.out.println(table.getRowCount());
+			System.out.println(table.getColumnCount());
+		}
+		if (event.getSource().equals(buttonView)) {
+			ShowTablesDAO objShow = new ShowTablesDAO();
+			try {
+				objShow.showTables();
+			} catch (SQLException error) {
+				JOptionPane.showMessageDialog(null, "ManageProduct:" + error);
+			}
 		}
 		if (event.getSource().equals(buttonLeave)) {
 			dispose();
 			Operations opFrame = new Operations();
 			opFrame.setVisible(true);
 		}
-
 	}
 }

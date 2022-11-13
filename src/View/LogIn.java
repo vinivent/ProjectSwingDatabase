@@ -65,13 +65,13 @@ public class LogIn extends JFrame implements ActionListener  {
     public void actionPerformed(ActionEvent event) {
 
         if (loginTextField.getText().equals("") || passwordField.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Preencha todos os campos.");
+            JOptionPane.showMessageDialog(null, "Preencha todos os campos.");
         } else if (loginTextField.getText().equals("admin") && passwordField.getText().equals("admin")) {
             dispose();
             Operations operationsFrame = new Operations();
             operationsFrame.setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(this, "Login ou senha inválidos");
+            JOptionPane.showMessageDialog(null, "Login ou senha inválidos");
             loginTextField.setText("");
             passwordField.setText("");
         }

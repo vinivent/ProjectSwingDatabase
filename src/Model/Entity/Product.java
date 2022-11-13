@@ -1,7 +1,5 @@
 package Model.Entity;
 
-import java.sql.Date;
-
 public class Product {
 
   
