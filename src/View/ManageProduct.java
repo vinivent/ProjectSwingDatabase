@@ -8,12 +8,14 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
+import Controller.DeleteProductDAO;
 import Controller.ShowTablesDAO;
+import Model.Entity.Product;
 
 public class ManageProduct extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	public static JTextField textField;
 	public static JTable table;
 	private JButton buttonLeave, buttonDelete, buttonView;
 
@@ -101,9 +103,8 @@ public class ManageProduct extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if (event.getSource().equals(buttonDelete)) {
-			System.out.println("deveria deletar as porra la");
-			System.out.println(table.getRowCount());
-			System.out.println(table.getColumnCount());
+			DeleteProductDAO productToBeDeleteed = new DeleteProductDAO();
+			productToBeDeleteed.deleteProduct();
 		}
 		if (event.getSource().equals(buttonView)) {
 			ShowTablesDAO objShow = new ShowTablesDAO();
