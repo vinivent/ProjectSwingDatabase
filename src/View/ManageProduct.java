@@ -10,7 +10,6 @@ import javax.swing.table.DefaultTableModel;
 
 import Controller.DeleteProductDAO;
 import Controller.ShowTablesDAO;
-import Model.Entity.Product;
 
 public class ManageProduct extends JFrame implements ActionListener {
 
@@ -105,8 +104,10 @@ public class ManageProduct extends JFrame implements ActionListener {
 		if (event.getSource().equals(buttonDelete)) {
 			DeleteProductDAO productToBeDeleteed = new DeleteProductDAO();
 			productToBeDeleteed.deleteProduct();
+			((DefaultTableModel) table.getModel()).setRowCount(0);
 		}
 		if (event.getSource().equals(buttonView)) {
+			((DefaultTableModel) table.getModel()).setRowCount(0);
 			ShowTablesDAO objShow = new ShowTablesDAO();
 			try {
 				objShow.showTables();
