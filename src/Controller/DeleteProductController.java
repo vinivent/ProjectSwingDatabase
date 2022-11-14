@@ -10,10 +10,12 @@ import Model.DAO.ConnectionDAO;
 import View.ManageProduct;
 
 public class DeleteProductController {
-    Connection connection;
-    PreparedStatement pstm;
+     Connection connection;
+     PreparedStatement pstm;
 
     public void deleteProduct() {
+        String sql = "DELETE FROM registerProduct WHERE ID= ?";
+
         if (searchId() == false) {
             JOptionPane.showMessageDialog(null, "Código do produto não encontrado no nosso sistema.");
             ManageProduct.textField.setText(null);
@@ -21,7 +23,6 @@ public class DeleteProductController {
             int confirm = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja deletar esse produto?", "Atenção",
                     JOptionPane.YES_NO_OPTION);
             if (confirm == JOptionPane.YES_OPTION) {
-                String sql = "DELETE FROM registerProduct WHERE ID= ?";
                 try {
                     connection = new ConnectionDAO().getConnection();
                     pstm = connection.prepareStatement(sql);

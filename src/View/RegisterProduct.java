@@ -8,6 +8,7 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import com.toedter.calendar.JDateChooser;
 
+import Controller.ConvertDate;
 import Controller.RegisterProductController;
 import Model.Entity.Product;
 
@@ -147,12 +148,12 @@ public class RegisterProduct extends JFrame implements ActionListener {
             productPurchase = purchaseTextField.getText();
             productSale = saleTextField.getText();
             productRegisterDate = dateChooser.getDate();
-            
+
             if (productCode.equals("") || amount.equals("") || productName.equals("") || productCategory.equals("")
                     || productPurchase.equals("") || productSale.equals("") || productRegisterDate == null) {
                 JOptionPane.showMessageDialog(null, "Preencha todos os campos obrigatórios.");
             } else {
-                productDate = Product.convertUtilDateToSqlDate(productRegisterDate);
+                productDate = ConvertDate.convertUtilDateToSqlDate(productRegisterDate);
                 product.setProductCategory(productCategory);
                 product.setProductDate(productDate);
                 product.setProductId(productCode);

@@ -6,7 +6,9 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import com.toedter.calendar.JDateChooser;
 
-public class ChangeProduct extends JFrame implements ActionListener{
+import Controller.ChangeProductController;
+
+public class ChangeProduct extends JFrame implements ActionListener {
 
     private JPanel contentPane;
     public static JTextField codeTextField;
@@ -16,7 +18,7 @@ public class ChangeProduct extends JFrame implements ActionListener{
     public static JTextField categoryTextField;
     public static JTextField amountTextField;
     public static JDateChooser dateChooser;
-    private JButton buttonLeave, buttonClear, buttonSave;
+    private JButton buttonLeave, buttonClear, buttonChange;
 
     public ChangeProduct() {
         setIconImage(Toolkit.getDefaultToolkit()
@@ -105,9 +107,9 @@ public class ChangeProduct extends JFrame implements ActionListener{
         lableAmount.setBounds(316, 192, 124, 14);
         contentPane.add(lableAmount);
 
-        buttonSave = new JButton("Salvar");
-        buttonSave.setBounds(135, 281, 89, 23);
-        contentPane.add(buttonSave);
+        buttonChange = new JButton("Alterar");
+        buttonChange.setBounds(135, 281, 89, 23);
+        contentPane.add(buttonChange);
 
         buttonClear = new JButton("Limpar");
         buttonClear.setBounds(261, 281, 89, 23);
@@ -128,29 +130,40 @@ public class ChangeProduct extends JFrame implements ActionListener{
         lableWarning.setBounds(141, 113, 326, 14);
         contentPane.add(lableWarning);
 
-		buttonSave.addActionListener(this); 
+        buttonChange.addActionListener(this);
         buttonClear.addActionListener(this);
-		buttonLeave.addActionListener(this);
+        buttonLeave.addActionListener(this);
     }
+
     @Override
-	public void actionPerformed(ActionEvent event) {
-		if (event.getSource().equals(buttonSave)) {
-			System.out.println("deveria inserir as porra la");
-		}
-		if (event.getSource().equals(buttonClear)) {
-			nameTextField.setText(null);
+    public void actionPerformed(ActionEvent event) {
+        if (event.getSource().equals(buttonChange)) {
+            ChangeProductController changeProduct = new ChangeProductController();
+
+            changeProduct.changeProduct();
+
+            nameTextField.setText(null);
             codeTextField.setText(null);
             purchaseTextField.setText(null);
             saleTextField.setText(null);
             categoryTextField.setText(null);
             amountTextField.setText(null);
             dateChooser.setDate(null);
-		}
-		if (event.getSource().equals(buttonLeave)) {
-			dispose();
-			Operations opFrame = new Operations();
-			opFrame.setVisible(true);
-		}
+        }
+        if (event.getSource().equals(buttonClear)) {
+            nameTextField.setText(null);
+            codeTextField.setText(null);
+            purchaseTextField.setText(null);
+            saleTextField.setText(null);
+            categoryTextField.setText(null);
+            amountTextField.setText(null);
+            dateChooser.setDate(null);
+        }
+        if (event.getSource().equals(buttonLeave)) {
+            dispose();
+            Operations opFrame = new Operations();
+            opFrame.setVisible(true);
+        }
 
-	}
+    }
 }

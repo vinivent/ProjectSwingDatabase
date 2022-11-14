@@ -6,14 +6,6 @@ public class Product {
 	private String productName, productCategory, productPurchase, productSale, productId, productQtd;
     java.sql.Date productDate;
 
-    public static java.sql.Date convertUtilDateToSqlDate(java.util.Date date){
-        if(date != null) {
-            java.sql.Date productDate = new java.sql.Date(date.getTime());
-            return productDate;
-        }
-        return null;
-    }
-
     public String getProductName() {
         return productName;
     }
