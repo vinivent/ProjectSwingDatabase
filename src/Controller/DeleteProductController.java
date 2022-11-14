@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 import Model.DAO.ConnectionDAO;
 import View.ManageProduct;
 
-public class DeleteProductDAO {
+public class DeleteProductController {
     Connection connection;
     PreparedStatement pstm;
 

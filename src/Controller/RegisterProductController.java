@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 import Model.DAO.ConnectionDAO;
 import Model.Entity.Product;
 
-public class RegisterProductDAO {
+public class RegisterProductController {
 
     Connection connection;
     PreparedStatement pstm;

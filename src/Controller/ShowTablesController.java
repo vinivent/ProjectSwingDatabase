@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
 import View.ManageProduct;
 import Model.DAO.ConnectionDAO;
 
-public class ShowTablesDAO {
+public class ShowTablesController {
     ResultSet result;
     Connection connection;
     PreparedStatement pstm;

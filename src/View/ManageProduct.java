@@ -8,8 +8,8 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
-import Controller.DeleteProductDAO;
-import Controller.ShowTablesDAO;
+import Controller.DeleteProductController;
+import Controller.ShowTablesController;
 
 public class ManageProduct extends JFrame implements ActionListener {
 
@@ -102,13 +102,13 @@ public class ManageProduct extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if (event.getSource().equals(buttonDelete)) {
-			DeleteProductDAO productToBeDeleteed = new DeleteProductDAO();
+			DeleteProductController productToBeDeleteed = new DeleteProductController();
 			productToBeDeleteed.deleteProduct();
 			((DefaultTableModel) table.getModel()).setRowCount(0);
 		}
 		if (event.getSource().equals(buttonView)) {
 			((DefaultTableModel) table.getModel()).setRowCount(0);
-			ShowTablesDAO objShow = new ShowTablesDAO();
+			ShowTablesController objShow = new ShowTablesController();
 			try {
 				objShow.showTables();
 			} catch (SQLException error) {

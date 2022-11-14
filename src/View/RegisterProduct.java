@@ -8,7 +8,7 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import com.toedter.calendar.JDateChooser;
 
-import Controller.RegisterProductDAO;
+import Controller.RegisterProductController;
 import Model.Entity.Product;
 
 public class RegisterProduct extends JFrame implements ActionListener {
@@ -161,7 +161,7 @@ public class RegisterProduct extends JFrame implements ActionListener {
                 product.setProductSale(productSale);
                 product.setProductQtd(amount);
 
-                RegisterProductDAO objProduct = new RegisterProductDAO();
+                RegisterProductController objProduct = new RegisterProductController();
                 objProduct.registerProduct(product);
 
                 nameTextField.setText(null);
