@@ -19,7 +19,9 @@ public class Operations extends JFrame implements ActionListener {
 		internalTitle.setFont(new Font("Modric", Font.PLAIN, 86));
 		internalTitle.setBounds(141, 0, 169, 102);
 		getContentPane().add(internalTitle);
-
+		Toolkit toolkit = getToolkit();
+        Dimension dimension = toolkit.getScreenSize();
+        setLocation(dimension.width/2 - getWidth()/2, dimension.height/2 - getHeight()/2);
 		JLabel internalSubtitle = new JLabel("Store");
 		internalSubtitle.setFont(new Font("Modric", Font.PLAIN, 15));
 		internalSubtitle.setBounds(246, 76, 84, 28);

@@ -25,7 +25,9 @@ public class ManageProduct extends JFrame implements ActionListener {
 		setBounds(600, 260, 740, 500);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
+		Toolkit toolkit = getToolkit();
+        Dimension dimension = toolkit.getScreenSize();
+        setLocation(dimension.width/2 - getWidth()/2, dimension.height/2 - getHeight()/2);
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 

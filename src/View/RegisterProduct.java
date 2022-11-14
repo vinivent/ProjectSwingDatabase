@@ -32,7 +32,9 @@ public class RegisterProduct extends JFrame implements ActionListener {
         setBounds(620, 320, 636, 400);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
+        Toolkit toolkit = getToolkit();
+        Dimension dimension = toolkit.getScreenSize();
+        setLocation(dimension.width/2 - getWidth()/2, dimension.height/2 - getHeight()/2);
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
