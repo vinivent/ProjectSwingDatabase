@@ -29,7 +29,7 @@ public class RegisterProduct extends JFrame implements ActionListener {
         setIconImage(Toolkit.getDefaultToolkit().getImage("./lib/fogo.png"));
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 636, 400);
+        setBounds(620, 320, 636, 400);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 

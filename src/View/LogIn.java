@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class LogIn extends JFrame implements ActionListener  {
+public class LogIn extends JFrame implements ActionListener {
 
     private JPanel contentPane;
     private JTextField loginTextField;
@@ -18,7 +18,7 @@ public class LogIn extends JFrame implements ActionListener  {
         setTitle("Sistema G3VD");
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 450, 300);
+        setBounds(720, 320, 450, 300);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -57,7 +57,7 @@ public class LogIn extends JFrame implements ActionListener  {
         passwordField.setBounds(164, 173, 134, 20);
         contentPane.add(passwordField);
 
-       btnLogIn.addActionListener(this);
+        btnLogIn.addActionListener(this);
 
     }
 

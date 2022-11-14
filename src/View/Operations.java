@@ -12,7 +12,7 @@ public class Operations extends JFrame implements ActionListener {
 		setTitle("Sistema G3VD ");
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("./lib/fogo.png"));
-		setBounds(100, 100, 450, 300);
+		setBounds(720, 320, 450, 300);
 		getContentPane().setLayout(null);
 		JLabel internalTitle = new JLabel("G3VD ");
 		internalTitle.setHorizontalAlignment(SwingConstants.CENTER);
