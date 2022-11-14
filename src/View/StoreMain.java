@@ -10,10 +10,8 @@ public class StoreMain {
             e.printStackTrace();
         }
         try {
-            ManageProduct a = new ManageProduct();
-            a.setVisible(true);
-            // LogIn frame = new LogIn();
-            // frame.setVisible(true);
+            LogIn frame = new LogIn();
+            frame.setVisible(true);
         } catch (Exception e) {
             e.printStackTrace();
         }
