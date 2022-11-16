@@ -140,15 +140,21 @@ public class RegisterProduct extends JFrame implements ActionListener {
         if (event.getSource().equals(buttonSave)) {
             Product product = new Product();
 
-            String productName, productCategory, productCode, amount, productPurchase, productSale;
+            String productName, productCategory;
+            Integer productCode, amount;
+            Double productPurchase, productSale;
             Date productRegisterDate;
+            Integer productCodeParseInt = Integer.parseInt(codeTextField.getText());
+            Integer amountParseInt = Integer.parseInt(amountTextField.getText());
+            Double purchaseParseDouble = Double.parseDouble(purchaseTextField.getText());
+            Double saleParseDouble = Double.parseDouble(purchaseTextField.getText());
 
-            productCode = codeTextField.getText();
-            amount = amountTextField.getText();
+            productCode = productCodeParseInt;
+            amount = amountParseInt;
             productName = nameTextField.getText();
             productCategory = categoryTextField.getText();
-            productPurchase = purchaseTextField.getText();
-            productSale = saleTextField.getText();
+            productPurchase = purchaseParseDouble;
+            productSale = saleParseDouble;
             productRegisterDate = dateChooser.getDate();
 
             if (productCode.equals("") || amount.equals("") || productName.equals("") || productCategory.equals("")
