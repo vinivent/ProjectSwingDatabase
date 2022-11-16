@@ -3,7 +3,7 @@
 
 <br/>
 
-### Funcionalidades:
+## Funcionalidades:
 
 - Uso de bibliotecas externas como: FlatLaf para o tema dark, MySql Connector para conexão do banco de dados e JCalendar função extra de calendário para nosso JFrame.
 
@@ -15,14 +15,14 @@
 
 <br/>
 
-### Demonstração:
+## Demonstração:
 
 soon: gif ou um link de alguma demonstração
 
 
 <br/>
 
-### Stack utilizada:
+## Stack utilizada:
 
 <div align="LEFT">
     <img align="center" alt"VSCODE" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/vscode/vscode-original.svg"   width="35" height="35"/> 
@@ -34,7 +34,7 @@ soon: gif ou um link de alguma demonstração
 
 <br/>
 
-### Autores:
+## Autores:
 
 - [@Vinícius Ventura](https://www.github.com/vinivent)
 - [@David Philien](https://www.github.com/davidplgomes)
