@@ -1,5 +1,5 @@
 
-<p align="center"> Project made for the Computer Science course at UNINASSAU college. <p/>
+<p align="center"> Project made for the Computer Science course at UNINASSAU college. <img align="right" alt"VSCODE" src="https://i.imgur.com/eFPYB0b.png"   width="140" height="80"/> <p/>
 
 <br/>
 
@@ -41,9 +41,8 @@ soon: gif ou um link de alguma demonstração
 
 ## Autores:
 
-- [@Vinícius Ventura](https://www.github.com/vinivent)
 - [@David Philien](https://www.github.com/davidplgomes)
 - [@Giovana Lopes](https://www.github.com/glopes2003)
 - [@Geraldo Neto](https://www.github.com/GeRa26)
 - [@Gustavo Luiz](https://www.instagram.com/guga.luizz)
-
+- [@Vinícius Ventura](https://www.github.com/vinivent)
