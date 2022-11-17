@@ -34,7 +34,7 @@ public class RegisterProduct extends JFrame implements ActionListener {
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         Toolkit toolkit = getToolkit();
         Dimension dimension = toolkit.getScreenSize();
-        setLocation(dimension.width/2 - getWidth()/2, dimension.height/2 - getHeight()/2);
+        setLocation(dimension.width / 2 - getWidth() / 2, dimension.height / 2 - getHeight() / 2);
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
@@ -140,21 +140,15 @@ public class RegisterProduct extends JFrame implements ActionListener {
         if (event.getSource().equals(buttonSave)) {
             Product product = new Product();
 
-            String productName, productCategory;
-            Integer productCode, amount;
-            Double productPurchase, productSale;
+            String productName, productCategory, productCode, amount, productPurchase, productSale;
             Date productRegisterDate;
-            Integer productCodeParseInt = Integer.parseInt(codeTextField.getText());
-            Integer amountParseInt = Integer.parseInt(amountTextField.getText());
-            Double purchaseParseDouble = Double.parseDouble(purchaseTextField.getText());
-            Double saleParseDouble = Double.parseDouble(purchaseTextField.getText());
 
-            productCode = productCodeParseInt;
-            amount = amountParseInt;
+            productCode = codeTextField.getText();
+            amount = amountTextField.getText();
             productName = nameTextField.getText();
             productCategory = categoryTextField.getText();
-            productPurchase = purchaseParseDouble;
-            productSale = saleParseDouble;
+            productPurchase = purchaseTextField.getText();
+            productSale = saleTextField.getText();
             productRegisterDate = dateChooser.getDate();
 
             if (productCode.equals("") || amount.equals("") || productName.equals("") || productCategory.equals("")
