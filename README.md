@@ -36,4 +36,4 @@
 
 <h2 align="center"> Autores: </h2>
 
-⠀⠀⠀⠀⠀⠀⠀⠀[@David Philien](https://www.github.com/davidplgomes)⠀⠀⠀[@Giovana Lopes](https://www.github.com/glopes2003)⠀⠀⠀[@Geraldo Neto](https://www.github.com/GeRa26) ⠀⠀⠀[@Gustavo Luiz](https://www.instagram.com/guga.luizz)⠀⠀⠀⠀[@Vinícius Ventura](https://www.github.com/vinivent)
+⠀⠀⠀⠀⠀⠀[@David Philien](https://www.github.com/davidplgomes)⠀⠀⠀[@Giovana Lopes](https://www.github.com/glopes2003)⠀⠀⠀[@Geraldo Neto](https://www.github.com/GeRa26) ⠀⠀⠀[@Gustavo Luiz](https://www.instagram.com/guga.luizz)⠀⠀⠀⠀[@Vinícius Ventura](https://www.github.com/vinivent)
