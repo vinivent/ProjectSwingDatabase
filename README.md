@@ -1,5 +1,5 @@
 
-<p align="center"> Project made for the Computer Science course at UNINASSAU college. <img align="right" alt"VSCODE" src="https://i.imgur.com/eFPYB0b.png"   width="140" height="80"/> <p/>
+<h3 align="center"> Project made for the Computer Science course at UNINASSAU college. <img align="right" alt"VSCODE" src="https://i.imgur.com/XUzFlKB.png" width="200" height="200"/> <h3/>
 
 <br/>
 
@@ -17,13 +17,8 @@
 
 ## Demonstração:
 
-soon: gif ou um link de alguma demonstração
+![App Gif](https://i.imgur.com/exOGTat.gif)
 
-<br/>
-
-## Screenshots:
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 <br/>
 
