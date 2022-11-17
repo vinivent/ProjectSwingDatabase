@@ -1,39 +1,57 @@
+<html>
+<body>
 
-<h3 align="center"> Projeto feito no curso de Ciência da Computação da UNINASSAU <img align="right" alt"VSCODE" src="https://i.imgur.com/XUzFlKB.png" width="200" height="200"/> <h3/>
+## Projeto do curso de Ciência da Computação da UNINASSAU  <img src="https://i.imgur.com/XUzFlKB.png" alt="Logo Nassau" width=200 height=200 align="right">
 
-<br/>
-
-## Funcionalidades:
-
-- Uso de bibliotecas externas como: FlatLaf para o tema dark, MySql Connector para conexão do banco de dados e JCalendar função extra de calendário para nosso JFrame.
-
-- Nosso aplicaitivo funciona fazendo uma conexão interface gráfica (JAVA) com o nosso banco de dados feito no MySql.
-
-- Nesse projeto visamos o uso do nosso sistema para gerência de produtos em alguma loja.
-
-- Entre algumas das funcionalidades podemos citar: Tela de LogIn, Operações, Registro de Produtos, Gerência de Produtos (Deletar/Ver Produtos) e Alteração dos produtos registrados no sistema.
+</body>
+</html>
 
 <br/>
 
-<h2 align="CENTER"> Demonstração: <h2/>
+> O intuito desse projeto de programação foi a criação de um sistema de gerenciamento de produtos para uma loja. Sendo assim, nosso sistema funciona através de uma conexão entre a interface gráfica usada (JAVA) e o banco de dados (MySql) com o uso de algumas bibliotecas externas que também contribuíram para a estética e melhor performance do projeto. 
 
+<br/>
+
+
+
+> <h3 align="CENTER"> Funcionalidades: <h3/>
+>
+     1. LogIn
+	 2. Operações
+	 3. Registro de produtos
+	 4. Gerência de produtos (Deletar/Consultar)
+     5. Alteração de produtos
+
+<br/>
+
+> <h3 align="CENTER"> Demonstração: <h3/>
+>
+<br>
 <div align="center">
 <img src="https://i.imgur.com/exOGTat.gif" alt="project working"/>
 </div>
 <br/>
+<br>
 
-<h2 align="center"> Stack utilizada: </h2>
+> <h3 align="CENTER"> Stacks Utilizadas: <h3/>
+>
+<br>
 
 <div align="center">
-    <img align="center" alt"VSCODE" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/vscode/vscode-original.svg"   width="35" height="35"/> 
-      <img align="center" alt"JAVA" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/java/java-plain.svg" width="40" height="40"/> 
-          <img align="center" alt"MYSQL" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/mysql/mysql-original-wordmark.svg" width="50" height="50"/> 
+    <img align="center" alt"VSCODE" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/vscode/vscode-original.svg"   width="50" height="50"/> 
+      <img align="center" alt"JAVA" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/java/java-plain.svg" width="79" height="70"/> 
+          <img align="center" alt"MYSQL" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/mysql/mysql-original-wordmark.svg" width="85" height="85"/> 
     
 </div>
-
-
 <br/>
+<br>
 
-<h2 align="center"> Autores: </h2>
+> <h3 align="center"> Autores: </h3>
+>
 
-⠀⠀⠀⠀⠀⠀[@David Philien](https://www.github.com/davidplgomes)⠀⠀⠀[@Giovana Lopes](https://www.github.com/glopes2003)⠀⠀⠀[@Geraldo Neto](https://www.github.com/GeRa26) ⠀⠀⠀[@Gustavo Luiz](https://www.instagram.com/guga.luizz)⠀⠀⠀⠀[@Vinícius Ventura](https://www.github.com/vinivent)
+<br>
+<div align="center">
+
+⠀[@David Philien](https://www.github.com/davidplgomes) [@Geraldo Neto](https://www.github.com/GeRa26) [@Giovana Lopes](https://www.github.com/glopes2003) [@Gustavo Luiz](https://www.instagram.com/guga.luizz) [@Vinícius Ventura](https://www.github.com/vinivent)
+
+</div>
