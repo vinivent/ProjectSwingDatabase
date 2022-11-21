@@ -2,54 +2,68 @@ package Model.Entity;
 
 public class Product {
 
-  
-	private String productName, productCategory, productPurchase, productSale, productId, productQtd;
+
+	private String productName, productCategory;
+    private Double productPurchase, productSale;
+    private Integer productId, productQtd;
     java.sql.Date productDate;
 
+
     public String getProductName() {
-        return productName;
+        return this.productName;
     }
+
     public void setProductName(String productName) {
         this.productName = productName;
     }
+
     public String getProductCategory() {
-        return productCategory;
+        return this.productCategory;
     }
+
     public void setProductCategory(String productCategory) {
         this.productCategory = productCategory;
     }
-    public String getProductPurchase() {
-        return productPurchase;
+
+    public Double getProductPurchase() {
+        return this.productPurchase;
     }
-    public void setProductPurchase(String productPurchase) {
+
+    public void setProductPurchase(Double productPurchase) {
         this.productPurchase = productPurchase;
     }
-    public String getProductSale() {
-        return productSale;
+
+    public Double getProductSale() {
+        return this.productSale;
     }
-    public void setProductSale(String productSale) {
+
+    public void setProductSale(Double productSale) {
         this.productSale = productSale;
     }
-    public String getProductId() {
-        return productId;
+
+    public Integer getProductId() {
+        return this.productId;
     }
-    public void setProductId(String productId) {
+
+    public void setProductId(Integer productId) {
         this.productId = productId;
     }
-    public String getProductQtd() {
-        return productQtd;
+
+    public Integer getProductQtd() {
+        return this.productQtd;
     }
-    public void setProductQtd(String productQtd) {
+
+    public void setProductQtd(Integer productQtd) {
         this.productQtd = productQtd;
     }
+
     public java.sql.Date getProductDate() {
-        return productDate;
+        return this.productDate;
     }
+
     public void setProductDate(java.sql.Date productDate) {
         this.productDate = productDate;
     }
 
-
-    
 
 }
